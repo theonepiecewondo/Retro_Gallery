@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Game Gallery
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,22 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title size="large">Game Gallery</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="container">
+    <div class="gallery" *ngFor="let game of gameList" (click)="push(game.title)">
+    <h4>{{game.title}}</h4>
+      <ion-img *ngIf="game.photo" class="img" src={{game.photo}}></ion-img>
+      <ion-img *ngIf="!game.photo" class="img" src="../assets/img/question.jpg"></ion-img>
+    </div>
+    <!-- <ion-card *ngFor="let game of gameList">
+      <ion-img *ngIf="game.photo" class="img" src={{game.photo}}></ion-img>
+      <ion-img *ngIf="!game.photo" class="img" src="../assets/img/question.jpg"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{game.title}}</ion-card-title>
+      </ion-card-header>
+    </ion-card> -->
+  </div>
+  <!-- <p *ngFor="let game of gameList">{{game.title}}</p> -->
 </ion-content>

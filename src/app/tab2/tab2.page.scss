@@ -1,0 +1,13 @@
+ion-list{
+    min-height: 85vh;
+    height: 100%;
+}
+.button-container{
+    display: flex;
+    justify-content: center;
+}
+.button-container ion-button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 45%;
+}

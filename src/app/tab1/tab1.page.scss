@@ -1,0 +1,28 @@
+ion-card{
+    width: 42%;
+    text-align: center;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.gallery{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+}
+.img{
+    width:  40vw;
+    height: 40vw;
+    object-fit: cover;
+}
+h4{
+    width: 90%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

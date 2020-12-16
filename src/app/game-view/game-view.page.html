@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>GameView</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card >
+      <ion-img *ngIf="game.photo" class="img" src={{game.photo}}></ion-img>
+      <ion-img *ngIf="!game.photo" class="img" src="../assets/img/question.jpg"></ion-img>
+      <ion-card-header>
+        <ion-card-subtitle>{{game.console}}</ion-card-subtitle>
+        <ion-card-title>{{game.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ul>
+          <li>Genre: {{game.genre}}</li>
+          <li>Publisher: {{game.publisher}}</li>
+          <li>Developer: {{game.developer}}</li>
+          <li>UPC: {{game.upc}}</li>
+        </ul>
+        <p>{{game.description}}</p>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
